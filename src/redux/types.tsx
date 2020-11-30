@@ -1,0 +1,6 @@
+export default {
+    SET_AUTH: "SET_AUTH",
+    GET_PROFILE: "GET_PROFILE",
+    GET_ADDRESS: "GET_ADDRESS",
+    SET_MEMBERSHIP:" SET_MEMBERSHIP",
+  };
