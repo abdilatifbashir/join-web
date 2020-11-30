@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+import { HYDRATE, createWrapper } from 'next-redux-wrapper'
 
 import reducers from "./reducers";
 
@@ -11,4 +12,9 @@ const reduxDevtools =
 
 const enhancers = compose(applyMiddleware(thunk), reduxDevtools);
 
-export default createStore(reducers, enhancers);
+const initStore = () => {
+  return createStore(reducers, enhancers)
+}
+
+export const wrapper = createWrapper(initStore)
+

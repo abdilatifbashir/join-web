@@ -15,8 +15,8 @@ class Api {
     });
 
    function getToken() {
+        if (typeof localStorage) return ''
         return localStorage.getItem('token');
-        
       }
 
   
